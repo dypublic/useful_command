@@ -6,7 +6,9 @@ git config credential.helper 'cache --timeout=54000'
 git config --global credential.helper 'store'  
 echo "https://username:password@git.derbysoft.tm">$HOME/..git-credentials  
 
-
+git branch -lvv  
+git branch -rvv  
+git branch -avv  
 
 ## 查看进程的线程数
 #top的每一行显示一个线程。  
