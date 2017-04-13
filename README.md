@@ -39,6 +39,7 @@ sudo su -s /bin/bash jenkins
 sudo -u jenkins bash
 
 ## user group
+#view group  
 cat /etc/group  
 #创建组  
 groupadd  test  
