@@ -39,14 +39,13 @@ sudo su -s /bin/bash jenkins
 sudo -u jenkins bash
 
 ## user group
-cat /etc/group
+cat /etc/group  
 #创建组  
 groupadd  test  
 #将test组的名子改成test2  
 groupmod -n test2  test  
 #删除组  
 groupdel test2  
-删除 组test2
 #查看当前登录用户所在的组  
 groups  
 #查看apacheuser所在组  
