@@ -25,7 +25,7 @@ cat /etc/redhat-release
 uname -a  
 lsb_release  
 
-## firewall
+## Firewall
 firewall-cmd --get-active-zones  
 sudo firewall-cmd --permanent --zone=public --add-port=9092/tcp  
 sudo firewall-cmd --reload  
@@ -33,12 +33,12 @@ sudo firewall-cmd --reload
 sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT  
 sudo service iptables save  
 
-## change user
+## Change user
 su username  
 sudo su -s /bin/bash jenkins  
 sudo -u jenkins bash  
 
-## user group
+## User group
 #view group  
 cat /etc/group  
 #创建组  
@@ -51,3 +51,6 @@ groupdel test2
 groups  
 #查看apacheuser所在组  
 groups apacheuser  
+
+## Change owner or group
+chown -R -v user:group testfile  
