@@ -56,6 +56,6 @@ groups apacheuser
 chown -R -v user:group testfile  
 
 ## check folder size 
-du -ah -d 1 path
-#check folder size with summery
-du -sh path
+du -ah -d 1 path 
+#check folder size with summery 
+du -sh path 
