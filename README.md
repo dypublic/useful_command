@@ -41,16 +41,16 @@ sudo -u jenkins bash
 ## User group
 #view group  
 cat /etc/group  
-#创建组  
+#create  
 groupadd  test  
-#将test组的名子改成test2  
-groupmod -n test2  test  
-#删除组  
+#change group name  
+groupmod -n new_name  old_name  
+#delete group  
 groupdel test2  
-#查看当前登录用户所在的组  
+#view current user's group  
 groups  
-#查看apacheuser所在组  
-groups apacheuser  
+#view user_name's group  
+groups user_name  
 
 ## Change owner or group
 chown -R -v user:group testfile  
