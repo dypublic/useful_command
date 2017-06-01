@@ -10,14 +10,14 @@ git branch -lvv
 git branch -rvv  
 git branch -avv  
 
-## 查看进程的线程数
-#top的每一行显示一个线程。  
+## view process or thread
+#thread per line  
 top -H  
 
-#查看所有存在的线程，grep进一步过滤。  
+#all threads  
 ps -xH  
 
-#指定的进程产生的线程数目。  
+#threads on process  
 ps -mq PID  
        
 ## CentOS version
@@ -59,3 +59,5 @@ chown -R -v user:group testfile
 du -ah -d 1 path  
 #check folder size with summery  
 du -sh path  
+
+
