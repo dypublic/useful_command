@@ -60,10 +60,11 @@ du -ah -d 1 path
 #check folder size with summery  
 du -sh path  
 
-## disable SELinux  
+## SELinux  
+#disable SELinux  
 sudo setenforce 0  
 
-## Permanently disable SELinux  
+#Permanently disable SELinux  
 #Edit /etc/selinux/config  
 SELINUX=disabled  
 
