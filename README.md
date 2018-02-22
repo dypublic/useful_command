@@ -68,3 +68,7 @@ sudo setenforce 0
 #Edit /etc/selinux/config  
 SELINUX=disabled  
 
+## Run in background
+nohup ping www.ibm.com >filename 2>&1 &  
+setsid ping www.ibm.com
+
