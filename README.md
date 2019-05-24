@@ -19,7 +19,23 @@ ps -xH
 
 #threads on process  
 ps -mq PID  
-       
+
+#perf look call stack  
+perf record -g -p 55
+
+#report memory map of a process  
+pmap -x 75  
+
+## network
+#net stats  
+netstat -s
+
+#socket stats tcp listen  
+ss -nlt
+
+#socket tcp v6 stats exclude ESTAB   
+sudo ss -t6 state all | grep -v ESTAB
+
 ## CentOS version
 cat /etc/redhat-release  
 uname -a  
