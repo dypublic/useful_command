@@ -13,6 +13,7 @@ git branch -avv
 ## view process or thread
 #thread per line  
 top -H  
+top -Hp PID
 
 #all threads  
 ps -xH  
