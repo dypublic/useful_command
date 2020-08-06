@@ -1,0 +1,31 @@
+#查看隔离级别
+select @@tx_isolation;
+-- 开启标准监控
+set GLOBAL innodb_status_output=ON;
+ 
+-- 关闭标准监控
+set GLOBAL innodb_status_output=OFF;
+ 
+-- 开启锁监控
+set GLOBAL innodb_status_output_locks=ON;
+ 
+-- 关闭锁监控
+set GLOBAL innodb_status_output_locks=OFF;
+
+set GLOBAL innodb_print_all_deadlocks=ON;
+
+在分析innodb中锁阻塞时，几种方法的对比情况：
+
+（1）使用show processlist查看不靠谱；
+（2）直接使用show engine innodb status查看，无法判断到问题的根因；
+（3）使用mysqladmin debug查看，能看到所有产生锁的线程，但无法判断哪个才是根因；
+（4）开启innodb_lock_monitor后，再使用show engine innodb status查看，能够找到锁阻塞的根因
+MySQL [test]> CREATE TABLE innodb_lock_monitor (a INT) ENGINE=INNODB;  ## 随便在一个数据库中创建这个表，就会打开lock monitor  
+
+
+
+解决死锁之路 系列文章
+https://www.aneasystone.com/archives/2017/10/solving-dead-locks-one.html
+https://www.aneasystone.com/archives/2017/11/solving-dead-locks-two.html
+https://www.aneasystone.com/archives/2017/12/solving-dead-locks-three.html
+https://www.aneasystone.com/archives/2018/04/solving-dead-locks-four.html
