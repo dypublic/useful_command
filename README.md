@@ -37,6 +37,9 @@ ss -nlt
 #socket tcp v6 stats exclude ESTAB   
 sudo ss -t6 state all | grep -v ESTAB
 
+#socket tcp time-wait state  
+ss -tan state time-wait | wc -l
+
 ## CentOS version
 cat /etc/redhat-release  
 uname -a  
