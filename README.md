@@ -92,3 +92,7 @@ SELINUX=disabled
 nohup ping www.ibm.com >filename 2>&1 &  
 setsid ping www.ibm.com
 
+## Systemd  
+#to see where is systemd looking for units  
+systemctl [--user] show -p UnitPath --value  
+
